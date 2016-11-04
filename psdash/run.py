@@ -1,8 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import gevent
-from gevent.monkey import patch_all
-patch_all()
-
+from gevent import monkey; monkey.patch_all()
 from gevent.pywsgi import WSGIServer
+
 import locale
 import argparse
 import logging
@@ -10,8 +11,10 @@ import socket
 import urllib
 import urllib2
 from logging import getLogger
-from flask import Flask
+
 import zerorpc
+from flask import Flask
+
 from psdash import __version__
 from psdash.node import LocalNode, RemoteNode
 from psdash.web import fromtimestamp
@@ -307,7 +310,7 @@ class PsDashRunner(object):
 def main():
     r = PsDashRunner.create_from_cli_args()
     r.run()
-    
+
 
 if __name__ == '__main__':
     main()

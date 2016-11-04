@@ -1,7 +1,6 @@
-# coding=utf-8
-
-import psutil
+# -*- coding: utf-8 -*-
 import time
+import psutil
 import netifaces
 
 

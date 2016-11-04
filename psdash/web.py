@@ -1,4 +1,4 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
 import logging
 import psutil
 import socket
@@ -45,6 +45,7 @@ def inject_header_data():
         'hostname': sysinfo['hostname'].decode('utf-8'),
         'uptime': uptime
     }
+
 
 @webapp.url_defaults
 def add_node(endpoint, values):

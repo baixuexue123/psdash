@@ -1,4 +1,4 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
 from psdash import __version__
 from setuptools import setup, find_packages
 
@@ -28,8 +28,8 @@ setup(
     zip_safe=False,
     install_requires=[
         'Flask==0.11.1',
-        'psutil==4.4.2',
-        'glob2==0.4.1',
+        'psutil==5.0.0',
+        'glob2==0.5.0',
         'gevent==1.1.2',
         'zerorpc==0.6.0',
         'netifaces==0.10.5',
